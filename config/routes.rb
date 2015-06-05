@@ -1,10 +1,21 @@
 Rails.application.routes.draw do
-  devise_for :admins
+  devise_for :admins,
+             path_names: { sign_in: 'sign-in', sign_out: 'logout', sign_up:'sign-up' }
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
   root to: 'public/home#index'
+
+  scope path: 'admins' do
+    scope module: :admin, as: :admin do
+
+      scope controller: :dashboard do
+        get '', action: :index, as: :root
+      end
+
+    end
+  end
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
