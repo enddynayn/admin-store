@@ -28,10 +28,12 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 ###
 # App customization
 ##
-gem 'slim', '~> 2.0'
 gem 'bootstrap-sass'
-gem 'puma'
 gem 'devise'
+gem 'kaminari'
+gem 'puma'
+gem 'slim', '~> 2.0'
+
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
