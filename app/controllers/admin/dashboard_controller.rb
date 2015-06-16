@@ -2,7 +2,12 @@ class Admin::DashboardController < Admin::BaseController
 
   def index
     # byebug
-    @user = User.all.includes(:items)
 
+    @dashboard = User.all_user_items
+
+  end
+
+  def show
+    render
   end
 end
