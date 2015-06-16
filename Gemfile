@@ -29,6 +29,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # App customization
 ##
 gem 'slim', '~> 2.0'
+gem 'bootstrap-sass'
 gem 'puma'
 gem 'devise'
 
