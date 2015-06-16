@@ -42,17 +42,21 @@ gem 'devise'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+
 group :development, :test do
   gem 'rspec-rails'
   gem 'factory_girl_rails'
-  gem 'rubocop'
-  gem 'scss-lint'
-  gem 'pre-commit'
   gem 'spring-watcher-listen'
   gem 'spring-commands-rspec'
 end
 
 group :development, :test do
+  gem 'rubocop'
+  gem 'scss-lint'
+  gem 'pre-commit'
+  gem 'hirb'
+  gem 'rack-mini-profiler'
+
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
 
