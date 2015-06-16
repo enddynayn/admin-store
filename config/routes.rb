@@ -7,13 +7,15 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root to: 'public/home#index'
 
-  scope path: 'admins' do
-    scope module: :admin, as: :admin do
 
-      scope controller: :dashboard do
-        get '', action: :index, as: :root
-      end
+  scope path: 'admins', module: :admin, as: :admin do
 
+    scope controller: :dashboard do
+      get '', action: :index, as: :root
+    end
+
+    scope controller: :users, path: 'users' do
+      get ':id', action: :show, as: :user
     end
   end
 
